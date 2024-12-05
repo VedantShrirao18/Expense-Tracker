@@ -13,6 +13,9 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get("/",(req,res)=>{
+    res.json({message: "Hello From Backend"});
+})
 app.use('/api/users', userRoutes);
 app.use('/api/expenses', expenseRoutes);
 
